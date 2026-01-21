@@ -68,12 +68,12 @@ INSERT INTO Project(project_id, project_name, start_date, end_date, budget) VALU
 ('P005', 'AI Research ', '2025-05-01', '2025-12-31', 100000.00);
 
 -- Chèn dữ liệu mẫu vào bảng Assignment
-INSERT INTO Assignment(assignment_id, project_id, role, hours_worked) VALUES
+INSERT INTO Assignment(emp_id, project_id, role, hours_worked) VALUES
 (1, 'P001', 'Developer', 150),
-(2, 'P001', 'Tester', 100),
-(3, 'P002', 'Tech Lead', 200),
-(4, 'P005', 'Data Scientist', 180),
-(5, 'P004', 'Content Creator', 50);
+(3, 'P001', 'Tester', 100),
+(1, 'P002', 'Tech Lead', 200),
+(5, 'P005', 'Data Scientist', 180),
+(4, 'P004', 'Content Creator', 50);
 
 -- PHẦN 2: Truy vấn dữ liệu cơ bản
 -- 3. 
@@ -149,7 +149,7 @@ JOIN Project ON Assignment.project_id = Project.project_id;
 
 
 
--- 16. 
+-- 16. em sua lai insert cua assignment vi no khong hien thi dung ten nhan vien, de nguyen mau insert thi code em no bi rong ten nhan vien
 SELECT Employee.emp_name, Assignment.role
 FROM Employee
 JOIN Department ON Employee.dept_id = Department.dept_id
